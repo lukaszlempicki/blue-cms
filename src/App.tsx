@@ -1,15 +1,18 @@
 import { Routes, Route } from "react-router-dom"
 import { Layout } from "@/components/Layout"
+import DashboardView from "./views/DashboardView"
+import ProductsView from "./views/ProductsView"
+import type { FunctionComponent } from "react"
 
-function App() {
-  return (
-    <Layout>
-      <Routes>
-        <Route path="/" element={<div>Dashboard</div>} />
-        <Route path="/products" element={<div>Lista produktów</div>} />
-      </Routes>
-    </Layout>
-  )
-}
+const App: FunctionComponent = () => (
+  <Layout>
+    <Routes>
+      <Route path="/" element={<DashboardView />} />
+      <Route path="/products" element={<ProductsView />} />
+      {/* <Route path="/products/new" element={<CreateProductView />} /> */}
+      {/* <Route path="/products/:id/edit" element={<EditProductView />} /> */}
+    </Routes>
+  </Layout>
+) 
 
 export default App

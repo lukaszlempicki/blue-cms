@@ -11,6 +11,9 @@ const Sidebar: FunctionComponent = () => {
 
   return (
     <aside className="w-64 border-r h-screen px-4 py-6 bg-muted/40">
+        <div className="flex items-center gap-3 px-3 py-2">
+            <span className="text-xl font-bold">Blue CMS</span>
+        </div>
       <nav className="space-y-2">
         {items.map((item) => (
           <NavLink
